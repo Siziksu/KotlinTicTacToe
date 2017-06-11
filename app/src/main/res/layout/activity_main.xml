@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context="com.siziksu.kotlinTicTacToe.view.main.MainActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/defaultToolbar"
+        android:id="@+id/mainToolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:minHeight="?attr/actionBarSize"
@@ -22,7 +22,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/statistics"
+        android:id="@+id/mainStatistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/statistics"
@@ -32,109 +32,110 @@
         android:textSize="13sp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="@+id/button_1"
-        app:layout_constraintBottom_toTopOf="@+id/button_1"
-        app:layout_constraintTop_toBottomOf="@+id/defaultToolbar" />
+        app:layout_constraintLeft_toLeftOf="@+id/mainGameButton1"
+        app:layout_constraintBottom_toTopOf="@+id/mainGameButton1"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_1"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton1"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintRight_toLeftOf="@+id/button_2"
-        app:layout_constraintTop_toTopOf="@+id/button_2"
+        app:layout_constraintRight_toLeftOf="@+id/mainGameButton2"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton2"
         android:layout_marginEnd="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_2"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton2"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
         android:layout_marginBottom="@dimen/image_button_spacing"
-        app:layout_constraintBottom_toTopOf="@+id/button_5"
+        app:layout_constraintBottom_toTopOf="@+id/mainGameButton5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_3"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton3"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintLeft_toRightOf="@+id/button_2"
-        app:layout_constraintTop_toTopOf="@+id/button_2"
+        app:layout_constraintLeft_toRightOf="@+id/mainGameButton2"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton2"
         android:layout_marginStart="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_4"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton4"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintRight_toLeftOf="@+id/button_5"
-        app:layout_constraintTop_toTopOf="@+id/button_5"
+        app:layout_constraintRight_toLeftOf="@+id/mainGameButton5"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton5"
         android:layout_marginEnd="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_5"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton5"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/defaultToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_6"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton6"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintLeft_toRightOf="@+id/button_5"
-        app:layout_constraintTop_toTopOf="@+id/button_5"
+        app:layout_constraintLeft_toRightOf="@+id/mainGameButton5"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton5"
         android:layout_marginStart="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_7"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton7"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintRight_toLeftOf="@+id/button_8"
-        app:layout_constraintTop_toTopOf="@+id/button_8"
+        app:layout_constraintRight_toLeftOf="@+id/mainGameButton8"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton8"
         android:layout_marginEnd="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_8"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton8"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_5"
+        app:layout_constraintTop_toBottomOf="@+id/mainGameButton5"
         android:layout_marginTop="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <ImageView
-        style="@style/AppTheme.ImageButton"
-        android:id="@+id/button_9"
+        style="@style/AppTheme.GameButton"
+        android:id="@+id/mainGameButton9"
         android:layout_width="@dimen/image_button_size"
         android:layout_height="@dimen/image_button_size"
-        app:layout_constraintLeft_toRightOf="@+id/button_8"
-        app:layout_constraintTop_toTopOf="@+id/button_8"
+        app:layout_constraintLeft_toRightOf="@+id/mainGameButton8"
+        app:layout_constraintTop_toTopOf="@+id/mainGameButton8"
         android:layout_marginStart="@dimen/image_button_spacing"
         android:contentDescription="@string/app_name" />
 
     <Button
         style="@style/AppTheme.Button"
         android:visibility="gone"
-        android:id="@+id/button_replay"
+        android:id="@+id/mainReplayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="mainReplayButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

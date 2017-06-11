@@ -6,43 +6,43 @@ import android.view.View
 import android.widget.ImageView
 import com.siziksu.kotlinTicTacToe.R
 import com.siziksu.kotlinTicTacToe.presenter.main.MainPresenter
-import kotlinx.android.synthetic.main.activity_tic_tac_toe.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     val TAG: String = "MainActivity"
 
     val presenter: MainPresenter by lazy { MainPresenter() }
-    val count: Int by lazy { container.childCount }
+    val count: Int by lazy { mainContainer.childCount }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tic_tac_toe)
-        setSupportActionBar(defaultToolbar)
-        statistics.text = presenter.getStatistics()
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(mainToolbar)
+        mainStatistics.text = presenter.getStatistics()
     }
 
-    fun imageButtonClick(view: View) {
+    fun mainGameButtonClick(view: View) {
         presenter.imageButtonClick(view, { value ->
             run {
                 if (value) {
-                    button_replay.visibility = View.VISIBLE
+                    mainReplayButton.visibility = View.VISIBLE
                     setImageButtonsEnable(false)
-                    statistics.text = presenter.getStatistics()
+                    mainStatistics.text = presenter.getStatistics()
                 }
             }
         })
     }
 
-    fun buttonClick(view: View) {
+    fun mainReplayButtonClick(view: View) {
         presenter.buttonClick(view)
-        button_replay.visibility = View.GONE
+        mainReplayButton.visibility = View.GONE
         setImageButtonsEnable(true)
     }
 
     private fun setImageButtonsEnable(value: Boolean) {
         (0..count - 1)
-                .filter { container.getChildAt(it) is ImageView }
-                .forEach { container.getChildAt(it).isEnabled = value }
+                .filter { mainContainer.getChildAt(it) is ImageView }
+                .forEach { mainContainer.getChildAt(it).isEnabled = value }
     }
 }

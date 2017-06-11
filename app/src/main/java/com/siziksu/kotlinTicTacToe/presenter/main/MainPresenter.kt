@@ -86,22 +86,22 @@ class MainPresenter {
 
     fun getCell(view: View): Int {
         when (view.id) {
-            R.id.button_1 -> return 1
-            R.id.button_2 -> return 2
-            R.id.button_3 -> return 3
-            R.id.button_4 -> return 4
-            R.id.button_5 -> return 5
-            R.id.button_6 -> return 6
-            R.id.button_7 -> return 7
-            R.id.button_8 -> return 8
-            R.id.button_9 -> return 9
+            R.id.mainGameButton1 -> return 1
+            R.id.mainGameButton2 -> return 2
+            R.id.mainGameButton3 -> return 3
+            R.id.mainGameButton4 -> return 4
+            R.id.mainGameButton5 -> return 5
+            R.id.mainGameButton6 -> return 6
+            R.id.mainGameButton7 -> return 7
+            R.id.mainGameButton8 -> return 8
+            R.id.mainGameButton9 -> return 9
             else -> return 0
         }
     }
 
     fun buttonClick(view: View) {
         when (view.id) {
-            R.id.button_replay -> replay()
+            R.id.mainReplayButton -> replay()
             else -> return
         }
     }
