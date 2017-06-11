@@ -10,10 +10,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val TAG: String = "MainActivity"
+    private val TAG: String = "MainActivity"
 
-    val presenter: MainPresenter by lazy { MainPresenter() }
-    val count: Int by lazy { mainContainer.childCount }
+    private val presenter: MainPresenter by lazy { MainPresenter() }
+    private val count: Int by lazy { mainContainer.childCount }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -8,16 +8,16 @@ import com.siziksu.kotlinTicTacToe.common.model.Winner
 
 class MainPresenter {
 
-    val TAG: String = "MainPresenter"
+    private val TAG: String = "MainPresenter"
 
-    val DRAW: Int = 0
-    val FIRST: Int = 1
-    val SECOND: Int = 2
-    var currentPlayer: Int = FIRST
-    var player1 = HashMap<Int, View>()
-    var player2 = HashMap<Int, View>()
-    val stats = Array(3) { 0 }
-    var moves: Int = 0
+    private val DRAW: Int = 0
+    private val FIRST: Int = 1
+    private val SECOND: Int = 2
+    private var currentPlayer: Int = FIRST
+    private var player1 = HashMap<Int, View>()
+    private var player2 = HashMap<Int, View>()
+    private val stats = Array(3) { 0 }
+    private var moves: Int = 0
 
     fun imageButtonClick(view: View, callback: (Boolean) -> Unit) {
         moves++
@@ -64,7 +64,7 @@ class MainPresenter {
         }
     }
 
-    fun checkWinner(): Winner? {
+    private fun checkWinner(): Winner? {
         if (player1.contains(1) && player1.contains(2) && player1.contains(3)) return Winner(FIRST, intArrayOf(1, 2, 3))
         else if (player1.contains(4) && player1.contains(5) && player1.contains(6)) return Winner(FIRST, intArrayOf(4, 5, 6))
         else if (player1.contains(7) && player1.contains(8) && player1.contains(9)) return Winner(FIRST, intArrayOf(7, 8, 9))
@@ -84,7 +84,7 @@ class MainPresenter {
         else return Winner(0, intArrayOf())
     }
 
-    fun getCell(view: View): Int {
+    private fun getCell(view: View): Int {
         when (view.id) {
             R.id.mainGameButton1 -> return 1
             R.id.mainGameButton2 -> return 2
@@ -106,7 +106,7 @@ class MainPresenter {
         }
     }
 
-    fun replay() {
+    private fun replay() {
         player1.forEach { it ->
             (it.value as ImageView).setImageDrawable(ContextCompat.getDrawable(it.value.context, android.R.color.transparent))
             it.value.isEnabled = true
