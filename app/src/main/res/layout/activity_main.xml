@@ -10,14 +10,11 @@
     tools:context="com.siziksu.kotlinTicTacToe.view.main.MainActivity">
 
     <TextView
+        style="@style/AppTheme.GameInfo"
         android:id="@+id/mainStatistics"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/statistics"
         android:text="@string/statistics"
-        android:textColor="#ffababab"
-        android:padding="10dp"
-        android:textSize="13sp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="@+id/mainGameButton1"

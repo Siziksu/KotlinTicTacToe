@@ -21,4 +21,11 @@
         <item name="android:background">@color/grid</item>
         <item name="android:onClick">mainGameButtonClick</item>
     </style>
+
+    <style name="AppTheme.GameInfo">
+        <item name="android:background">@drawable/info_box</item>
+        <item name="android:textColor">#ffababab</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>
