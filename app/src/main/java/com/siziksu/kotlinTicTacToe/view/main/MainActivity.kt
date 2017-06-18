@@ -10,7 +10,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAG: String = "MainActivity"
+    companion object {
+        private const val TAG: String = "MainActivity"
+    }
 
     private val presenter: MainPresenter by lazy { MainPresenter() }
     private val count: Int by lazy { mainContainer.childCount }

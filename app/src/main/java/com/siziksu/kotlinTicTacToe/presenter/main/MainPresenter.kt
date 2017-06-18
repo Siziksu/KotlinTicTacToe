@@ -8,11 +8,13 @@ import com.siziksu.kotlinTicTacToe.common.model.Winner
 
 class MainPresenter {
 
-    private val TAG: String = "MainPresenter"
+    companion object {
+        private const val TAG: String = "MainPresenter"
+        private const val DRAW: Int = 0
+        private const val FIRST: Int = 1
+        private const val SECOND: Int = 2
+    }
 
-    private val DRAW: Int = 0
-    private val FIRST: Int = 1
-    private val SECOND: Int = 2
     private var currentPlayer: Int = FIRST
     private var player1 = HashMap<Int, View>()
     private var player2 = HashMap<Int, View>()
