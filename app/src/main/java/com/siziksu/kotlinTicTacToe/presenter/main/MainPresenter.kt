@@ -125,6 +125,7 @@ class MainPresenter {
         val total = stats[DRAW] + stats[FIRST] + stats[SECOND]
         return "TOTAL GAMES PLAYED: $total\n" +
                 "PLAYER 1 WINS: " + stats[FIRST] + "\n" +
-                "PLAYER 2 WINS: " + stats[SECOND]
+                "PLAYER 2 WINS: " + stats[SECOND] + "\n" +
+                "DRAW GAMES: " + stats[DRAW]
     }
 }

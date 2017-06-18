@@ -9,21 +9,9 @@
     android:background="@drawable/background"
     tools:context="com.siziksu.kotlinTicTacToe.view.main.MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/mainToolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:minHeight="?attr/actionBarSize"
-        android:background="@color/toolbar_background"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <TextView
         android:id="@+id/mainStatistics"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/statistics"
         android:text="@string/statistics"
@@ -33,8 +21,9 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="@+id/mainGameButton1"
+        app:layout_constraintRight_toRightOf="@+id/mainGameButton3"
         app:layout_constraintBottom_toTopOf="@+id/mainGameButton1"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         style="@style/AppTheme.GameButton"
@@ -85,7 +74,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/app_name" />
 
     <ImageView
